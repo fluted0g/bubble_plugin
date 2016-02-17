@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bubbles</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
+        <script src="js/libs/twitter-bootstrap/js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/bubbles.js" type="text/javascript"></script>
+        <script src="js/libs/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+
+
+        <link href="js/libs/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bubbles.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="js/libs/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+
+
+    </head>
+    <body class="ui-front">
+        
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">BUBBLES</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#howTo">How To</a></li>
+                        <li><a href="#Demo">Demo</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <section id="howTo">
+
+            <h3>Bubbles: a simple plugin that allows you to create expandable divs.</h3>
+            <p>These bubbles can be expanded by doubleclicking, and can be filled with any content.</p>
+            
+            <p>To install the plugin, just add the bubbles.js and bubbles.css files in your project (get them HERE).
+            When those files are in, make sure to link them in the html files you want to use bubbles.
+            Bubbles requires <a href="https://jquery.com/">jquery</a> and <a href="https://jqueryui.com/">jquery-ui</a>.</p>
+
+            <h4>A bubble element looks like this:</h4>
+
+            <pre>
+        &ltdiv class="draggable bubble" id="bubble01"&gt
+            &ltdiv class="reduced_body"&gt
+                &lth4&gtBubble One&lt/h4&gt
+            &lt/div&gt
+            &ltdiv class="expanded_body"&gt
+                &ltdiv&gt&lth4&gtI'm a bubble!&lt/h4&gt&lt/div&gt
+                &ltp&gtYou can put almost anything inside here!!!&lt/p&gt                   
+            &lt/div&gt
+        &lt/div&gt </pre>
+
+            <p>Remember to add the class "bubble", "reduced_body" and "expanded_body", and add this script on the bottom of your html:</p>
+
+            <pre>
+        &ltscript&gt
+            $(document).ready(function () {
+
+                //if you don't want the bubbles to move, don't put this line
+                //draggable function can be customized, look here: http://api.jqueryui.com/draggable/
+                $(".draggable").draggable();
+
+                //put here as many id's as bubbles you created
+                expandableDBL($("#bubble01"));
+                expandableDBL($("#bubble02"));
+                expandableDBL($("#bubble03"));
+            });
+        &lt/script&gt</pre>
+
+            <p>Finally, you should declare the initial position of each bubble in your css, like this:</p>
+            <pre>
+        #bubble01 {
+            top: 10px;
+            left: 20px;
+        }</pre>
+        </section>
+
+        
+
+        <section class="bubbleContainer" id="Demo">
+            
+            <h3>DEMO:</h3>
+            <span>Drag the bubbles and double click them.</span>
+
+            <div class="draggable bubble" id="bubble01">
+                <div class="reduced_body">
+                    <h4>Bubble One</h4>
+                </div>
+                <div class="expanded_body">
+                    <div><h4>I'm a bubble!</h4></div>
+                    <p>You can put almost anything inside here!!!</p>                    
+                </div>
+            </div>
+
+            <div class="draggable bubble" id="bubble02">
+                <div class="reduced_body">
+                    <h4>Bubble Two</h4>
+                </div>
+                <div class="expanded_body">
+                    <div><h4>I'm another bubble!</h4></div>
+                    <p>I can:</p>
+                    <ul>
+                        <li>Move</li>
+                        <li>Expand</li>
+                        <li>Be awesome!</li>
+                    </ul>             
+                </div>
+            </div>
+
+            <div class="draggable bubble" id="bubble03">
+                <div class="reduced_body">
+                    <h4>Bubble Three</h4>
+                </div>
+                <div class="expanded_body">
+                    <div><h4>I'm the third bubble</h4></div>
+                    <p>I come from bubble kingdom</p>   
+                    <img alt="bubble kingdom" src="http://fs01.androidpit.info/a/68/52/queen-bubble-kingdom-685249-w192.png"/>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            
+            <p>© 2016 Álvaro Borrajeros Estrada</p>
+            <a href="https://github.com/fluted0g/fluted0g.github.io">See it on gitHub</a>
+            
+        </footer>
+        
+        <script>
+
+
+
+
+            $(document).ready(function () {
+
+                $(".draggable").draggable({stack: ".draggable", containment: "parent"});
+                expandableDBL($("#bubble01"));
+                expandableDBL($("#bubble02"));
+                expandableDBL($("#bubble03"));
+                expandableDBL($("#bubble04"));
+
+                $("#formButt").click(function (event) {
+                    event.preventDefault();
+                });
+
+
+            });
+
+
+
+        </script>
+    </body>
+</html>

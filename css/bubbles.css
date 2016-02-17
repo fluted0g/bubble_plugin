@@ -1,0 +1,42 @@
+/* 
+    Created on : 05-feb-2016, 10:16:52
+    Author     : fluted0g
+*/
+body {
+    position: relative;
+}
+
+  .bubble {
+      padding: 0.5em;
+      position: absolute;
+      z-index: 1;
+      overflow: hidden;
+  }
+  
+  
+  .bubble, .reduced {
+      border-radius: 200px;
+      height: 10em;
+      width: 10em;
+  }
+  
+  .reduced_body {
+      text-align: center;
+      width:75%;
+      height: 80%;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-top: 25%;
+  }
+    
+  .expanded {
+      border-radius: 15px;
+      height: 30em;
+      width: 25em;
+  }
+  
+  .expanded_body {
+      display: none;
+      height: 90%;
+      width: 90%;
+  }
