@@ -41,7 +41,11 @@
       width: 90%;
     }
 
-    
+    .expanded_body img {
+      max-width: 95%;
+      max-height: 75%;
+    }
+
     #bubble01 {
       top: 100px;
       left: 20px;
