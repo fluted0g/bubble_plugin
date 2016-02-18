@@ -1,42 +1,59 @@
 /* 
     Created on : 05-feb-2016, 10:16:52
     Author     : fluted0g
-*/
-body {
-    position: relative;
-}
+    */
+    body {
+      position: relative;
+    }
 
-  .bubble {
+    .bubble {
       padding: 0.5em;
       position: absolute;
       z-index: 1;
       overflow: hidden;
-  }
-  
-  
-  .bubble, .reduced {
+    }
+    
+    
+    .bubble, .reduced {
       border-radius: 200px;
       height: 10em;
       width: 10em;
-  }
-  
-  .reduced_body {
+    }
+    
+    .reduced_body {
       text-align: center;
       width:75%;
       height: 80%;
       overflow: hidden;
       margin: 0 auto;
       margin-top: 25%;
-  }
+    }
     
-  .expanded {
+    .expanded {
       border-radius: 15px;
       height: 30em;
       width: 25em;
-  }
-  
-  .expanded_body {
+    }
+    
+    .expanded_body {
       display: none;
       height: 90%;
       width: 90%;
-  }
+    }
+
+    
+    #bubble01 {
+      top: 100px;
+      left: 20px;
+    }
+
+    #bubble02 {
+      top: 100px;
+      left: 140px;
+    }
+
+    #bubble03 {
+      top: 100px;
+      left: 240px;
+    }
+

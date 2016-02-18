@@ -44,22 +44,6 @@ pre {
     padding-top: 0.3em;
 }
 
-
-#bubble01 {
-    top: 100px;
-    left: 20px;
-}
-
-#bubble02 {
-    top: 100px;
-    left: 140px;
-}
-
-#bubble03 {
-    top: 100px;
-    left: 240px;
-}
-
 footer {
     background-color: #ffb20a;
     margin-bottom: 20px;
@@ -74,10 +58,13 @@ footer p {
     float: left;
 }
 
+a {
+  color: blue;
+}
+
 footer>a {
     float:right;
     margin-right: 5%;
-    color: black;
 }
 
 .navbar-fixed-top {

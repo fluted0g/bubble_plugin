@@ -1,6 +1,6 @@
 /* 
     Created on : 05-feb-2016, 10:17:33
-    Author     : a047087313b
+    Author     : fluted0g
 */
 
 
@@ -45,14 +45,14 @@ expandableDBL = function ($elem,$time) {
         $($elem).toggleClass("reduced", $time).promise().done(function () {
             
             if (state) {
-                //hide reduced content, show expanded content
+                //hide reduced content, show expanded content while body expands
                 $(this).find(".reduced_body").fadeOut(1200);
                 $(this).toggleClass("expanded", $time).promise().done(function() {                    
                     $(this).find(".expanded_body").fadeIn(800);                    
                 });                
                 state = false;                
             } else {
-                //show reduced content, hide expanded content
+                //show reduced content, hide expanded content while body reduces
                 $(this).find(".expanded_body").fadeOut(800);
                 $(this).toggleClass("expanded", $time);
                 $(this).find(".reduced_body").fadeIn(1200);                
