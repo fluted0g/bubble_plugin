@@ -33,6 +33,7 @@ Remember to add the class "bubble", "reduced_body" and "expanded_body", and add 
             });
             
 Finally, you should declare the initial position of each bubble in your css, like this:
+
             #bubble01 {
               top: 10px;
               left: 20px;
